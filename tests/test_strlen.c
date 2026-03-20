@@ -3,7 +3,7 @@
 
 void validate(const char *test_name, const char *txt, size_t expected_size)
 {
-    size_t resultado = strlen(txt);
+    size_t resultado = vds_strlen(txt);
 
     if (resultado == expected_size)
     {

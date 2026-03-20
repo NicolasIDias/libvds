@@ -1,7 +1,7 @@
 #include <vds/types.h>
 #include <vds/string.h>
 
-int strcmp(const char *s1, const char *s2)
+int vds_strcmp(const char *s1, const char *s2)
 {
     while (*s1 && (*s1 == *s2))
     {
