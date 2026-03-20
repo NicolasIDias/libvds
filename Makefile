@@ -21,13 +21,13 @@ test_strcat: tests/test_strcat.c $(SRC_STRING)
 	$(CC) $(CFLAGS) tests/test_strcat.c $(SRC_STRING) -o test_strcat
 
 test: test_types test_strlen test_strcmp test_strcpy test_strcat
-	@echo "--- Iniciando testes ---"
+	@echo "---- Iniciando testes ----"
 	./test_types
 	./test_strlen
 	./test_strcmp
 	./test_strcpy
 	./test_strcat
-	@echo "--- Testes finalizados ---"
+	@echo "---- Testes finalizados ----"
 
 clean:
 	rm -f ./test_types ./test_strlen ./test_strcmp ./test_strcpy ./test_strcat
