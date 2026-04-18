@@ -1,3 +1,5 @@
+#pragma once
+
 typedef struct node_t
 {
 	void *val;
@@ -10,3 +12,6 @@ typedef struct list_t
 	Node *last;
 	int counter;
 } LinkedList;
+
+LinkedList create_list();
+Node *create_node(void *val);
