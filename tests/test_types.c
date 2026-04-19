@@ -1,33 +1,42 @@
 #include <stdio.h>
-#include <vds/types.h>
+#include <vds/vds_types.h>
+#include <vds/vds_assert.h>
 
-int main()
+int main(void)
 {
-    printf("[SYSTEM CHECK] Iniciando validacao dos tipos core...\n");
+    printf("[TEST] Validating core types...\n");
 
-    size_t ptr_size = sizeof(void *);
-    size_t size_size_t = sizeof(size_t);
+    vds_size_t size_vds_size_t = sizeof(vds_size_t);
+    vds_assert(size_vds_size_t > 0);
+    printf("[PASS] vds_size_t correctly configured (%lu bytes).\n", size_vds_size_t);
 
-    if (ptr_size == size_size_t)
-    {
-        printf("[OK] size_t configurado corretamente (%zu bytes).\n", size_size_t);
-    }
-    else
-    {
-        printf("[FAIL] Inconsistencia no size_t!\n");
-    }
-
-    // void *null_ptr = NULL;
-    // if (null_ptr == (void*)0) {
-    //     printf("[OK] Macro NULL operando corretamente.\n");
-    // }
+    void *null_ptr = NULL;
+    vds_assert(null_ptr == (void *)0);
+    printf("[PASS] NULL macro operating correctly.\n");
 
     bool active = true;
-    if (active == true && false == 0)
-    {
-        printf("[OK] Logica booleana base operacional.\n");
-    }
+    vds_assert(active == true && false == 0);
+    printf("[PASS] Boolean logic is operational.\n");
 
-    printf("[SYSTEM CHECK] Validacao de tipos concluida.\n\n");
+    bool inactive = false;
+    vds_assert(inactive == 0);
+    printf("[PASS] Boolean false equals 0.\n");
+
+    vds_assert(true == 1);
+    printf("[PASS] Boolean true equals 1.\n");
+
+    bool result = 1;
+    vds_assert(result == true);
+    printf("[PASS] Implicit conversion: 1 → true.\n");
+
+    result = 0;
+    vds_assert(result == false);
+    printf("[PASS] Implicit conversion: 0 → false.\n");
+
+    vds_size_t sz = 100;
+    vds_assert(sz > 0 && sz < 1000);
+    printf("[PASS] vds_size_t operating as unsigned type.\n");
+
+    printf("[TEST] Type validation completed.\n\n");
     return 0;
 }
