@@ -4,7 +4,7 @@
 #define true 1
 #define false 0
 
-typedef typeof(sizeof(0)) size_t;
+typedef unsigned int vds_size_t;
 
 #ifndef NULL
 #define NULL ((void *)0)
