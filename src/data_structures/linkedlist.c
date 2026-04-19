@@ -2,9 +2,7 @@
 #include <vds/types.h>
 #include <vds/memory.h>
 #include <vds/assert.h>
-#include <stdlib.h> // will be changed later with vds_alloc (current in defvelopment)
-
-LinkedList *create_list()
+LinkedList *create_list(void)
 {
     LinkedList *list = malloc(sizeof(LinkedList));
     vds_assert(list != NULL);
