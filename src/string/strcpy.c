@@ -1,6 +1,6 @@
 #include <vds/types.h>
 
-char *vds_strcpy(char *dest, const char *src, size_t n)
+char *vds_strcpy(VDS_NONNULL char *dest, VDS_NONNULL const char *src, size_t n)
 {
     if (n == 0) return dest;
     size_t i = 0;

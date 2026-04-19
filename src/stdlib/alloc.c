@@ -1,3 +1,5 @@
+// Currently im studying how to implement this
+
 #include <vds/memory.h>
 #include <vds/types.h>
 
