@@ -1,5 +1,7 @@
 #pragma once
 
+#include <vds/types.h>
+
 typedef struct node_t
 {
 	void *val;
@@ -13,5 +15,4 @@ typedef struct list_t
 	int counter;
 } LinkedList;
 
-LinkedList create_list();
-Node *create_node(void *val);
+LinkedList *create_list();

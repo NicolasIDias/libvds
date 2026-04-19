@@ -4,16 +4,41 @@
 #include <vds/assert.h>
 #include <stdlib.h> // will be changed later with vds_alloc (current in defvelopment)
 
-Node *create_node(VDS_NONNULL void *data, size_t data_size) {
+LinkedList *create_list()
+{
+    LinkedList *list = malloc(sizeof(LinkedList));
+    vds_assert(list != NULL);
+
+    list->first = NULL;
+    list->last = NULL;
+    list->counter = 0;
+
+    return list;
+}
+
+Node *create_node(VDS_NONNULL void *data)
+{
     Node *new_node = malloc(sizeof(Node));
     vds_assert(new_node != NULL);
 
-    new_node->val = malloc(data_size);
-
-    vds_assert(new_node->val != NULL);
-
-    vds_memcpy(new_node->val, data, data_size);
-
+    new_node->val = data;
     new_node->next = NULL;
     return new_node;
+}
+
+int insert_node(VDS_NONNULL LinkedList *list, VDS_NONNULL void *data)
+{
+    Node *node = create_node(data);
+    vds_assert(node != NULL);
+
+    if (list->first == NULL) {
+        list->first = node;
+    } else {
+        list->last->next = node;
+    }
+
+    list->last = node;
+    list->counter++;
+
+    return 0;
 }
