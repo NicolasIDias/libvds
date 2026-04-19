@@ -2,7 +2,7 @@
 #include <vds/types.h>
 #include <vds/assert.h>
 
-void *vds_memcpy(VDS_NONNULL void *dest, VDS_NONNULL const void *src, size_t count)
+void *vds_memcpy(VDS_NONNULL void *dest, VDS_NONNULL const void *src, vds_size_t count)
 {
     vds_assert(dest != NULL);
     vds_assert(src != NULL);
