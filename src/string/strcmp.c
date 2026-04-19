@@ -8,6 +8,5 @@ int vds_strcmp(VDS_NONNULL const char *s1, VDS_NONNULL const char *s2)
         s1++;
         s2++;
     }
-    // Retorna a diferença aritmética dos caracteres onde eles divergiram
-    return *(unsigned char *)s1 - *(unsigned char *)s2;
+    return *(const unsigned char *)s1 - *(const unsigned char *)s2;
 }
