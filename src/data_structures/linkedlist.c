@@ -2,6 +2,8 @@
 #include <vds/types.h>
 #include <vds/memory.h>
 #include <vds/assert.h>
+#include <stdlib.h>
+
 LinkedList *create_list(void)
 {
     LinkedList *list = malloc(sizeof(LinkedList));

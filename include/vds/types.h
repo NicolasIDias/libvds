@@ -1,10 +1,17 @@
 #pragma once
 
-#define bool _Bool
-#define true 1
-#define false 0
+#ifndef bool
+    #define bool _Bool
+    #define true 1
+    #define false 0
+#endif
 
-typedef unsigned int vds_size_t;
+
+#ifdef __SIZE_TYPE__
+    typedef __SIZE_TYPE__ vds_size_t;
+#else
+    typedef unsigned long vds_size_t;
+#endif
 
 #ifndef NULL
 #define NULL ((void *)0)
