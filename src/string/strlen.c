@@ -1,5 +1,5 @@
-#include <vds/types.h>
-#include <vds/string.h>
+#include <vds/vds_types.h>
+#include <vds/vds_string.h>
 
 vds_size_t vds_strlen(VDS_NONNULL const char *string)
 {

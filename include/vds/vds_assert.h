@@ -2,7 +2,7 @@
 
 #include <stdio.h> 
 #include <stdlib.h>
-#include <vds/types.h>
+#include <vds/vds_types.h>
 
 // pre preprocessor flag -DNDBUG
 #ifdef NDEBUG

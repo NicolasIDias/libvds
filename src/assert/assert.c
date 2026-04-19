@@ -1,7 +1,7 @@
-#include <vds/assert.h>
+#include <vds/vds_assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <vds/types.h>
+#include <vds/vds_types.h>
 
 void vds_assert_fail(const char *expr, const char *file, int line, const char *func)
 {

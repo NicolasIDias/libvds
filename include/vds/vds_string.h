@@ -1,4 +1,4 @@
-#include <vds/types.h>
+#include <vds/vds_types.h>
 
 vds_size_t vds_strlen(VDS_NONNULL const char *string);
 int vds_strcmp(VDS_NONNULL const char *string1, VDS_NONNULL const char *string2);

@@ -1,5 +1,5 @@
-#include <vds/types.h>
-#include <vds/string.h>
+#include <vds/vds_types.h>
+#include <vds/vds_string.h>
 
 int vds_strcmp(VDS_NONNULL const char *s1, VDS_NONNULL const char *s2)
 {

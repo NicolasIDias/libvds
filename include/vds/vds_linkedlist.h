@@ -1,6 +1,6 @@
 #pragma once
 
-#include <vds/types.h>
+#include <vds/vds_types.h>
 
 typedef struct node_t
 {

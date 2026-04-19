@@ -1,7 +1,7 @@
-#include <vds/linkedlist.h>
-#include <vds/types.h>
-#include <vds/memory.h>
-#include <vds/assert.h>
+#include <vds/vds_linkedlist.h>
+#include <vds/vds_types.h>
+#include <vds/vds_memory.h>
+#include <vds/vds_assert.h>
 #include <stdlib.h>
 
 LinkedList *create_list(void)

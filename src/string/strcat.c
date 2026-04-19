@@ -1,5 +1,5 @@
-#include <vds/types.h>
-#include <vds/string.h>
+#include <vds/vds_types.h>
+#include <vds/vds_string.h>
 
 char *vds_strcat(VDS_NONNULL char *dest, VDS_NONNULL const char *src, vds_size_t n)
 {
