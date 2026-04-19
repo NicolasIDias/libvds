@@ -15,4 +15,6 @@ typedef struct list_t
 	int counter;
 } LinkedList;
 
-LinkedList *create_list();
+LinkedList *create_list(void);
+Node *create_node(VDS_NONNULL void *data);
+int insert_node(VDS_NONNULL LinkedList *list, VDS_NONNULL void *data);
