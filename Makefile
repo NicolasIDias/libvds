@@ -51,7 +51,7 @@ valgrind: test
 	@echo "---- Initing Valgrind ----"
 	@for exe in $(TESTS); do \
 		echo "---- VALGRIND $$exe ----"; \
-		$(VALGRIND) "$$exe"; \
+		$(VALGRIND) "$$exe" || exit 1; \
 	done
 
 clean:
