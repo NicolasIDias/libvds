@@ -4,7 +4,7 @@
 #include <vds/vds_assert.h>
 #include <stdlib.h>
 
-VDSLinkedList *create_list(void)
+VDSLinkedList *vds_ll_create(void)
 {
     VDSLinkedList *list = malloc(sizeof(VDSLinkedList));
     vds_assert(list != NULL);
@@ -16,7 +16,7 @@ VDSLinkedList *create_list(void)
     return list;
 }
 
-VDSLLNode *vds_ll_create_(VDS_NONNULL void *data)
+VDSLLNode *vds_ll_create_node(VDS_NONNULL void *data)
 {
     VDSLLNode *node = malloc(sizeof(VDSLLNode));
     vds_assert(node != NULL);
@@ -28,7 +28,7 @@ VDSLLNode *vds_ll_create_(VDS_NONNULL void *data)
 
 int vds_ll_push_back(VDS_NONNULL VDSLinkedList *list, VDS_NONNULL void *data)
 {
-    VDSLLNode *node = vds_ll_create_(data);
+    VDSLLNode *node = vds_ll_create_node(data);
     vds_assert(node != NULL);
 
     if (list->first == NULL)
@@ -48,7 +48,7 @@ int vds_ll_push_back(VDS_NONNULL VDSLinkedList *list, VDS_NONNULL void *data)
 
 int vds_ll_push_front(VDS_NONNULL VDSLinkedList *list, VDS_NONNULL void *data)
 {
-    VDSLLNode *node = vds_ll_create_(data);
+    VDSLLNode *node = vds_ll_create_node(data);
     vds_assert(node != NULL);
 
     if (list->first == NULL)
