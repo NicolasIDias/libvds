@@ -37,7 +37,8 @@ int main(void)
     vds_assert(dest5[0] == 100 && dest5[1] == 200 && dest5[2] == 300);
     printf("[PASS] Integer copy: [100,200,300].\n");
 
-    struct Point {
+    struct Point
+    {
         int x;
         int y;
     } src6 = {10, 20};
