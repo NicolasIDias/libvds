@@ -15,8 +15,8 @@ typedef struct list_t
 	int counter;
 } VDSLinkedList;
 
-VDSLinkedList *create_list(void);
-VDSLLNode *vds_ll_create_(VDS_NONNULL void *data);
+VDSLinkedList *vds_ll_create(void);
+VDSLLNode *vds_ll_create_node(VDS_NONNULL void *data);
 int vds_ll_push_back(VDS_NONNULL VDSLinkedList *list, VDS_NONNULL void *data);
 int vds_ll_push_front(VDS_NONNULL VDSLinkedList *list, VDS_NONNULL void *data);
 int vds_ll_pop_back(VDS_NONNULL VDSLinkedList *list);
