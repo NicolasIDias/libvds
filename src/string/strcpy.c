@@ -3,7 +3,8 @@
 
 char *vds_strcpy(VDS_NONNULL char *dest, VDS_NONNULL const char *src, vds_size_t n)
 {
-    if (n == 0) return dest;
+    if (n == 0)
+        return dest;
     vds_size_t i = 0;
     while (src[i] != '\0' && i < n)
     {
@@ -15,6 +16,6 @@ char *vds_strcpy(VDS_NONNULL char *dest, VDS_NONNULL const char *src, vds_size_t
         dest[i] = '\0';
         i++;
     }
-    dest[n-1] = '\0';
+    dest[n - 1] = '\0';
     return dest;
 }
