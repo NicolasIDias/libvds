@@ -2,19 +2,23 @@
 
 #include <vds/vds_types.h>
 
-typedef struct node_t
+typedef struct VDSLLNode_t
 {
 	void *val;
-	struct node_t *next;
-} Node;
+	struct VDSLLNode_t *next;
+} VDSLLNode;
 
 typedef struct list_t
 {
-	Node *first;
-	Node *last;
+	VDSLLNode *first;
+	VDSLLNode *last;
 	int counter;
-} LinkedList;
+} VDSLinkedList;
 
-LinkedList *create_list(void);
-Node *create_node(VDS_NONNULL void *data);
-int insert_node(VDS_NONNULL LinkedList *list, VDS_NONNULL void *data);
+VDSLinkedList *create_list(void);
+VDSLLNode *vds_ll_create_(VDS_NONNULL void *data);
+int vds_ll_push_back(VDS_NONNULL VDSLinkedList *list, VDS_NONNULL void *data);
+int vds_ll_push_front(VDS_NONNULL VDSLinkedList *list, VDS_NONNULL void *data);
+int vds_ll_pop_back(VDS_NONNULL VDSLinkedList *list);
+int vds_ll_pop_front(VDS_NONNULL VDSLinkedList *list);
+void vds_ll_destroy(VDS_NONNULL VDSLinkedList *list);
