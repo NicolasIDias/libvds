@@ -4,15 +4,15 @@
 
 typedef struct VDSLLNode_t
 {
-	void *val;
-	struct VDSLLNode_t *next;
+    void *val;
+    struct VDSLLNode_t *next;
 } VDSLLNode;
 
 typedef struct list_t
 {
-	VDSLLNode *first;
-	VDSLLNode *last;
-	int counter;
+    VDSLLNode *first;
+    VDSLLNode *last;
+    int counter;
 } VDSLinkedList;
 
 VDSLinkedList *vds_ll_create(void);

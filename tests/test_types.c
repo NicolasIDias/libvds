@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <vds/vds_types.h>
 #include <vds/vds_assert.h>
+#include <vds/vds_types.h>
 
 int main(void)
 {

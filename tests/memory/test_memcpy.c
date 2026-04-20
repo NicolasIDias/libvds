@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <vds/vds_memory.h>
 #include <vds/vds_assert.h>
+#include <vds/vds_memory.h>
 #include <vds/vds_string.h>
 
 int main(void)
