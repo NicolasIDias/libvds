@@ -1,8 +1,8 @@
-#include <vds/vds_vector.h>
-#include <vds/vds_types.h>
-#include <vds/vds_memory.h>
-#include <vds/vds_assert.h>
 #include <stdlib.h> // temorary until i develop my arena allocator
+#include <vds/vds_assert.h>
+#include <vds/vds_memory.h>
+#include <vds/vds_types.h>
+#include <vds/vds_vector.h>
 
 VDSVector *vds_create_vec(vds_size_t capacity, vds_size_t data_size)
 {
@@ -40,7 +40,7 @@ int vds_vec_push(VDS_NONNULL VDSVector *vector, VDS_NONNULL void *data)
 void vds_vec_resize(VDS_NONNULL VDSVector *vector)
 {
     vector->capacity *= 2;
-    vector->data = realloc(vector->data, vector->capacity);
+    vector->data = realloc(vector->data, vector->capacity * vector->element_size);
 }
 
 void vds_free_vec(VDS_NONNULL VDSVector *vector)
