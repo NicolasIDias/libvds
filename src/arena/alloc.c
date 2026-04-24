@@ -5,5 +5,4 @@
 
 void *vds_alloc(VDS_NONNULL vds_size_t size)
 {
-
 }

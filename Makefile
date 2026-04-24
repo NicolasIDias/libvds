@@ -54,5 +54,12 @@ valgrind: test
 		$(VALGRIND) "$$exe" || exit $$?; \
 	done
 
+format:
+	@echo "---- Formatting code in microsoft style----"
+	@find include -name "*.h" -exec clang-format -i -style=Microsoft {} +
+	@find src -name "*.c" -exec clang-format -i -style=Microsoft {} +
+	@find tests -name "*.c" -exec clang-format -i -style=Microsoft {} +
+	@echo "---- Formatting completed ----"
+
 clean:
 	rm -f $(TESTS) $(TEST_OBJS) $(SRC_OBJS) $(LIB_NAME)

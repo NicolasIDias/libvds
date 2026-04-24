@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <vds/vds_linkedlist.h>
 #include <vds/vds_assert.h>
+#include <vds/vds_linkedlist.h>
 
 int main(void)
 {
@@ -181,28 +181,28 @@ int main(void)
     VDSLinkedList *list5 = vds_ll_create();
     int inter_val1 = 1000, inter_val2 = 2000, inter_val3 = 3000, inter_val4 = 4000;
 
-    vds_ll_push_back(list5, &inter_val1);     
+    vds_ll_push_back(list5, &inter_val1);
     vds_assert(list5->counter == 1);
-    vds_ll_push_front(list5, &inter_val2);   
+    vds_ll_push_front(list5, &inter_val2);
     vds_assert(list5->counter == 2);
-    vds_ll_push_back(list5, &inter_val3);     
+    vds_ll_push_back(list5, &inter_val3);
     vds_assert(list5->counter == 3);
-    vds_ll_push_front(list5, &inter_val4);    
+    vds_ll_push_front(list5, &inter_val4);
     vds_assert(list5->counter == 4);
 
     vds_assert(*(int *)list5->first->val == 4000);
     vds_assert(*(int *)list5->last->val == 3000);
     printf("[PASS] Intercalated pushes completed: [4000, 2000, 1000, 3000].\n");
 
-    vds_ll_pop_front(list5);                    
+    vds_ll_pop_front(list5);
     vds_assert(list5->counter == 3);
     vds_assert(*(int *)list5->first->val == 2000);
-    vds_ll_pop_back(list5);                    
+    vds_ll_pop_back(list5);
     vds_assert(list5->counter == 2);
     vds_assert(*(int *)list5->last->val == 1000);
     printf("[PASS] Intercalated pops completed: counter = 2.\n");
 
-    vds_ll_pop_back(list5);                     
+    vds_ll_pop_back(list5);
     vds_assert(list5->counter == 1);
     vds_assert(list5->first == list5->last);
     vds_assert(*(int *)list5->first->val == 2000);

@@ -1,8 +1,8 @@
-#include <vds/vds_linkedlist.h>
-#include <vds/vds_types.h>
-#include <vds/vds_memory.h>
-#include <vds/vds_assert.h>
 #include <stdlib.h>
+#include <vds/vds_assert.h>
+#include <vds/vds_linkedlist.h>
+#include <vds/vds_memory.h>
+#include <vds/vds_types.h>
 
 VDSLinkedList *vds_ll_create(void)
 {

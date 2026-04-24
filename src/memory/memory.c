@@ -1,6 +1,6 @@
+#include <vds/vds_assert.h>
 #include <vds/vds_memory.h>
 #include <vds/vds_types.h>
-#include <vds/vds_assert.h>
 
 void *vds_memcpy(VDS_NONNULL void *dest, VDS_NONNULL const void *src, vds_size_t count)
 {
