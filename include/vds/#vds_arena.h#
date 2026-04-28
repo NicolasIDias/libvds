@@ -1,4 +1,5 @@
 #pragma once
+
 #include <vds/vds_types.h>
 
 #define MB(x) ((vds_size_t)(x) << 20)

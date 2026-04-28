@@ -4,3 +4,6 @@
 *\.exe
 *\.out
 *\.app
+.cache/clangd/
+compile-commands.json
+

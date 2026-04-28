@@ -6,12 +6,12 @@
 #include <vds/vds_memory.h>
 #include <vds/vds_types.h>
 
-VDSArena *vds_arena_init()
+VDSArena *vds_arena_init(void)
 {
     VDSArena *arena = malloc(sizeof(VDSArena));
-    assert(arena != NULL);
+    vds_assert(arena != NULL);
     VDSArenaBlock *block = malloc(sizeof(VDSArenaBlock));
-    assert(block != NULL);
+    vds_assert(block != NULL);
 
     block->next = NULL;
     block->prev = NULL;
